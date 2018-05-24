@@ -7,6 +7,7 @@ void setup()
 StringList lines = new StringList();
 lines.append(loadStrings("DogBreeds.txt"));
 lines.append(loadStrings("RandomWords.txt"));
+lines.append(loadStrings("DogBreeds.txt"));
 lines.append(loadStrings("RandomPlaces.txt"));
 //lines.append(loadStrings("Debug.txt"));
 lines.lower();
@@ -25,10 +26,9 @@ T.Normalise();
 //println("Normalisation End");
 
 String NewBreed = "";
-for(int Ammount = 0; Ammount < 500; Ammount++)
-{
-  String[] ls = new String[25];
-for(int i = 0; i < 25; i++)
+
+  String[] ls = new String[500];
+for(int i = 0; i < 500; i++)
 {
   boolean picked = false;
   while(picked == false)
@@ -42,8 +42,7 @@ for(int i = 0; i < 25; i++)
   ls[i] = NewBreed;
 }
 saveStrings("output.txt",ls);
-}
-
+println("--------------DONE-------------");
 }
 
 
